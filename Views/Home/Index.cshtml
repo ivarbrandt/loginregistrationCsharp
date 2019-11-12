@@ -1,0 +1,57 @@
+﻿@model User
+
+<div class="text-left">
+  <h1 class="display-4">Register to this Cool site!</h1>
+  <a class="float-right" href="/login">Login</a>
+  <div class="row mt-3 justify-content-start">
+    <div class="col-sm-7 mr-5">
+      <br />
+      <form
+        asp-action="Register"
+        asp-controller="Home"
+        class="form-group"
+        method="post"
+      >
+        <div class="row my-3">
+          <label asp-for="FirstName"></label>
+          <span asp-validation-for="FirstName"></span>
+          <input class="form-control" asp-for="FirstName" />
+        </div>
+
+        <div class="row my-3">
+          <label asp-for="LastName"></label>
+          <span asp-validation-for="LastName"></span>
+          <input class="form-control" asp-for="LastName" />
+        </div>
+
+        <div class="row my-3">
+          <label asp-for="Email"></label>
+          <span asp-validation-for="Email"></span>
+          <input class="form-control" asp-for="Email" />
+        </div>
+
+        <div class="row my-3">
+          <label asp-for="Password"></label>
+          <span asp-validation-for="Password"></span>
+          <input class="form-control" asp-for="Password" />
+        </div>
+
+        <div class="row my-3">
+          <label asp-for="ConfirmPassword"></label>
+          <span asp-validation-for="ConfirmPassword"></span>
+          <input class="form-control" asp-for="ConfirmPassword" />
+        </div>
+
+        <div class="row my-3">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            style="margin-top: 17px"
+          >
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
